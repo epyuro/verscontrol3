@@ -43,7 +43,7 @@ int findFirstStringWithGivenOperator(char code[MAX_STRING_AMOUNT][MAX_STRING_LEN
 	}
 	return -1;
 }
-
+//third stage
 
 int main()
 {
