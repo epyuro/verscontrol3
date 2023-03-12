@@ -193,7 +193,7 @@ string convertFormulaToTex(const string& reversePolishEntry)
 		throw ex;
 	}
 
-	if (reversePolishEntryElements.size() != 0) { // � ������� �������� ��������  �������� �������� ����������������� ��������
+	if (reversePolishEntryElements.size() == 0) { // � ������� �������� ��������  �������� �������� ����������������� ��������
 		throw EXCESS_OF_OPERANDS_EXCEPTION; // ������ ����������
 	}
 
