@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "..\09_Gailevich_Y_V\Header.h"
-
+//first stage
 
 #define MAX_STRING_AMOUNT 60
 #define MAX_STRING_LENGTH 90
