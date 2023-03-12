@@ -68,7 +68,7 @@ int main()
 	{
 		gets_s(InputText[k]);
 	}
-
+//fiveth stage
 	gets_s(GivenOperator);
 
 	char OperatorDevider[] = " ";
