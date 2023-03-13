@@ -39,7 +39,7 @@ short *TruthTableSystem::getTruthTable(QStringList &subExpressions, int &rowAmou
 Node* TruthTableSystem::parseExpression(QDomNode &xNode)
 {
     Node* result;
-    if (xNode.toElement().tagName() == "variable") // если xml узел соответствует узлу переменной
+    if (xNode.toElement().tagName() == "value") // если xml узел соответствует узлу переменной
     {
         // Создать новый узел переменной, со строковым представлением равным имени переменной
         errorController.isVariableCorrect(xNode);
