@@ -134,3 +134,4 @@ short *TruthTableSystem::makeTruthTable()
     }
     return values;
 }
+//Изменение
