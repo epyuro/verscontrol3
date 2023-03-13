@@ -7,7 +7,7 @@ int main(int argc, char* argv[])
 	output_file.open(QIODevice::WriteOnly | QIODevice::Text);
 	QTextStream out(&output_file);
 
-	if (argc != 4) {
+	if (argc != 3) {
 		out << "Too many arguments." << endl;
 		return -1;
 	}
