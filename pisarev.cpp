@@ -12,6 +12,7 @@ unsigned long long int arrangementWithRepeats(int m, int n);
 // Добавил изменения для комита в main #1
 
 int main() {
+	// Сделал измения для коммита в свою ветку pisarev #1
 
 	int operNumber = 0;
 	int firstNum = 0;
@@ -21,6 +22,7 @@ int main() {
 	scanf("%d", &operNumber);
 	switch (operNumber) 
 	{
+		// Сделал изменения для коммита в свою ветку pisarev #2
 		case 1:
 			printf("Введите числа m и n,где n>=0; m>=0; m<=n\n");
 			scanf("%d%d", &firstNum, &secondNum);

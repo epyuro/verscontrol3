@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
        int countSymbolFileType = 4;
        QString inType(argv[1]); //Расширение входного файла
        if (inType.size() >= countSymbolFileType)
-           inType = inType.last(countSymbolFileType);
+           inType = inType.last(countSymbolFileType);//2222
        if (inType != ".xml")
        {
            error err;
@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
        readXML(argv[1], &firstVert); //Считать вершины из xml-файла
 
        //Получить вектор всех вершин
-       QVector<vert*> verts;
+       QVector<vert*> verts; //1111
        verts.append(firstVert);
        QVector<vert*> children;
        findAllChildren(&firstVert, children);
