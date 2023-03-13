@@ -23,6 +23,24 @@ int main()
 	}
 }
 
+void output(const successWork_findControlOperator* result, const Operator* foundOperator)
+{
+	if (*result == DONE)
+	{
+		printf_s("%d %d\n", foundOperator->startPosition.stringIndex, foundOperator->startPosition.symbolInStringIndex);
+		char operatorsName[5][9] = { "if", "switch", "for", "while", "do while" }; // Имена операторов
+		puts(operatorsName[foundOperator->type]);
+	}
+	else if (*result == NO_BRACKET)
+	{
+		printf_s("no bracket");
+	}
+	else
+	{
+		printf_s("no operator");
+	}
+}
+
 successWork_findControlOperator findControlOperator(const ProgramText* code, const positionOfSymbol* positionOfCurlyBracket, Operator* operatorInformation)
 {
 	//Если переданная позиция не является скобкой...
@@ -249,23 +267,7 @@ int input(positionOfSymbol* positionCurlyBracket, ProgramText* code)
 	return isError;
 }
 
-void output(const successWork_findControlOperator* result, const Operator* foundOperator)
-{
-	if (*result == DONE)
-	{
-		printf_s("%d %d\n", foundOperator->startPosition.stringIndex, foundOperator->startPosition.symbolInStringIndex);
-		char operatorsName[5][9] = { "if", "switch", "for", "while", "do while" }; // Имена операторов
-		puts(operatorsName[foundOperator->type]);
-	}
-	else if (*result == NO_BRACKET)
-	{
-		printf_s("no bracket");
-	}
-	else
-	{
-		printf_s("no operator");
-	}
-}
+
 //Мда
 void removeAllSeparatorsFromString(char str[], const char* seps)
 {
