@@ -20,7 +20,7 @@ int main()
 	//-------Ввод данных-------------
 	if (input(&positionCurlyBracket, &code))
 	{
-		printf_s("invalid input data");
+		printf_s("Invalid Input Data");
 	}
 	else
 	{
@@ -290,7 +290,7 @@ void deleteAllSeparatorsFromString(char str[], const char* seps)
 		}
 		else
 		{
-			i++; //Перейти к следующему элементу
+			i+=2; //Перейти к следующему элементу
 		}
 	}
 }
