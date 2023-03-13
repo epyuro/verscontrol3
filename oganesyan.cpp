@@ -11,6 +11,7 @@ bool in_circle(float x, float y,
   const float dx = x - cx,
               dy = y - cy;
 
+	float j = 1.33;
   return dx * dx + dy * dy <= r * r;
 }
 
@@ -56,5 +57,12 @@ bool aas(int x, int y){
 bool aaswwww(int xe, int yq){
 	return false;
 }
+
+bool delete(int deleter){
+	if (deleter!=0)
+		return false;
+	return true;
+}
+
 
 
