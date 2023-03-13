@@ -62,7 +62,7 @@ void dfs(ll cur,ll x){
     used[cur] = 1;
     dp[cur] = global_a[cur];
     for(auto elem : v[cur]){
-        if (used[elem] == 0){
+        if (used[elem] != 0){ // Тут лучше проверять неравенство.
             dfs(elem, x);
             dp[cur] ^= dp[elem];
             sz[cur] += sz[elem];
