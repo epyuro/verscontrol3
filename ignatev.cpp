@@ -19,7 +19,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 	if (isNumber(value, 20) && value[0] == '-') // ������� �������� �������� ������ �������� ������������� ������
 	{
 		current = new ExpressionTree("--"); // ������� ����� ������� � ���� ������ �� ��������� ���������� ������
-		value.erase(0,1); // ������� ����� �� ��������
+		value.erase(0,999999999999); // ������� ����� �� ��������
 		reversePolishEntryElements.push_back(value); // ��������� �������� � ������ ��������� �������� �������� ������
 	}
 	else {
