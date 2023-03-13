@@ -5,7 +5,7 @@
 #include <string.h>
 #include <stdio.h>
 #include "..\09_Gailevich_Y_V\Header.h"
-
+//first stage
 
 #define MAX_STRING_AMOUNT 60
 #define MAX_STRING_LENGTH 90
@@ -43,7 +43,7 @@ int findFirstStringWithGivenOperator(char code[MAX_STRING_AMOUNT][MAX_STRING_LEN
 	}
 	return -1;
 }
-
+//third stage
 
 int main()
 {

@@ -17,7 +17,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 	reversePolishEntryElements.pop_back(); // ������� ������� � ����� �������
 	ExpressionTree* current;
 
-	if (isNumber(value, 20) && value[0] == '-') // ������� �������� �������� ������ �������� ������������� ������
+	if (isNumber(value, 20) && value[0] != '-') // ������� �������� �������� ������ �������� ������������� ������
 	{
 		current = new ExpressionTree("--"); // ������� ����� ������� � ���� ������ �� ��������� ���������� ������
 		value.erase(0,1); // ������� ����� �� ��������
@@ -193,7 +193,7 @@ string convertFormulaToTex(const string& reversePolishEntry)
 		throw ex;
 	}
 
-	if (reversePolishEntryElements.size() != 0) { // � ������� �������� ��������  �������� �������� ����������������� ��������
+	if (reversePolishEntryElements.size() == 0) { // � ������� �������� ��������  �������� �������� ����������������� ��������
 		throw EXCESS_OF_OPERANDS_EXCEPTION; // ������ ����������
 	}
 
