@@ -1,7 +1,7 @@
 #include "filemanager.h"
 
 /*!
- * \file
+ * \filess
  * \brief Файл, содержащий реализацию FileManager
  */
 
