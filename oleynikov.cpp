@@ -231,7 +231,7 @@ int isBracesFound(const char programCode[MAX_STR_COUNT][MAX_STR_LEN], int string
     return bracesIsFound;
 }
 
-
+//change oleynikov 1
 int isFirstCharBeforeFunctionNameValidTokenForIdentifier(const char programCode[MAX_STR_COUNT][MAX_STR_LEN], int stringCount, PositionInCode positionFunctionNameInCode) 
 {
     int isValidTokenForIdentifier = 0;
@@ -260,7 +260,7 @@ int isFirstCharAfterFunctionNameParenthesis(const char programCode[MAX_STR_COUNT
     return isParenthesis;
 }
 
-
+// change main 1
 int areThisSymbolAndFirstTokenAfterPositionEqual(const char programCode[MAX_STR_COUNT][MAX_STR_LEN], int stringCount, PositionInCode positionInCode, char symbol, int commentsAreIgnored) 
 {
     PositionInCode positionFirstToken = { -1, -1 };
