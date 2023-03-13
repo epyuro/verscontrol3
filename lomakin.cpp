@@ -22,7 +22,7 @@ short constantInFunction::getAppearingString(int index)
 	else
 		return -1;
 }
-
+//second commit in main 
 
 /*
 Добавить встречу константы на определённой строке
@@ -43,3 +43,4 @@ void constantInFunction::setName(std::string _name)
 {
 	this->name = _name;
 }
+// first commit in main
