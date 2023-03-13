@@ -12,8 +12,8 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
-	Node* tree = new Node;
-	tree->set_type(operation);
+	Node* new_tree = new Node;
+	new_tree->set_type(operation);
 
 	QString error_text = "";
 	switch (Read_tree_from_file(argv[2], *tree))
