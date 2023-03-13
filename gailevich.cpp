@@ -60,7 +60,7 @@ int TruthTableSystem::insertNode(Node *node)
     }
     else
     {
-        // Добавить узел в конец вектора
+        // Добавить узел в конец вектора номер три
         nodes.append(node);
     }
     return isVariable;
