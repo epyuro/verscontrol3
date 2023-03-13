@@ -65,7 +65,7 @@ void dfs(ll cur,ll x){
         if (used[elem] == 0){
             dfs(elem, x);
             dp[cur] ^= dp[elem];
-            sz[cur] += sz[elem];
+            sz[cur] -= sz[elem]; // Вычитание элемента массива.
         }
     }
 
