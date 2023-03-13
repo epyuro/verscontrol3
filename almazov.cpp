@@ -318,7 +318,6 @@ int function(const int a) {
     for (int i = 0; i < a; i++) {
         res++;
     }
-
     return res;
 }
 
