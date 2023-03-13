@@ -23,6 +23,24 @@ int main()
 	}
 }
 
+void output(const successWork_findControlOperator* result, const Operator* foundOperator)
+{
+	if (*result == DONE)
+	{
+		printf_s("%d %d\n", foundOperator->startPosition.stringIndex, foundOperator->startPosition.symbolInStringIndex);
+		char operatorsName[5][9] = { "if", "switch", "for", "while", "do while" }; // Имена операторов
+		puts(operatorsName[foundOperator->type]);
+	}
+	else if (*result == NO_BRACKET)
+	{
+		printf_s("no bracket");
+	}
+	else
+	{
+		printf_s("no operator");
+	}
+}
+
 successWork_findControlOperator findControlOperator(const ProgramText* code, const positionOfSymbol* positionOfCurlyBracket, Operator* operatorInformation)
 {
 	//Если переданная позиция не является скобкой...
@@ -165,6 +183,26 @@ int isContainsOperator(const char* str, Operator* operaorInformation)
 
 }
 
+
+int isEndsInSemicolon(const char* str)
+{
+	char strCpy[MAX_ROW_LENGTH];
+	strcpy_s(strCpy, str);//Скопировать содержимое переданной строки
+
+	//Удалить все белые разделители из скопированной строки
+	char whiteSeps[] = " \t\n\v\f\r";
+	deleteAllSeparatorsFromString(strCpy, whiteSeps);
+
+	if (strCpy[strlen(strCpy) - 1] == ';') //последний символ в скопированной строке является точкой с запятой
+	{
+		return 1; //	Считать, что строка оканчивается точкой с запятой
+	}
+	else
+	{
+		return 0; //	Считать, что строка не оканчивается точкой с запятой
+	}
+}
+
 int findFirstNotEmptyString(const ProgramText* code, int strIndex, DirectionFind direction)
 {
 	int indexNotEmptyString = -1; //Считать, что непустая строка не найдена
@@ -199,24 +237,6 @@ int findFirstNotEmptyString(const ProgramText* code, int strIndex, DirectionFind
 	return indexNotEmptyString;
 }
 
-int isEndsInSemicolon(const char* str)
-{
-	char strCpy[MAX_ROW_LENGTH];
-	strcpy_s(strCpy, str);//Скопировать содержимое переданной строки
-
-	//Удалить все белые разделители из скопированной строки
-	char whiteSeps[] = " \t\n\v\f\r";
-	deleteAllSeparatorsFromString(strCpy, whiteSeps);
-
-	if (strCpy[strlen(strCpy) - 1] == ';') //последний символ в скопированной строке является точкой с запятой
-	{
-		return 1; //	Считать, что строка оканчивается точкой с запятой
-	}
-	else
-	{
-		return 0; //	Считать, что строка не оканчивается точкой с запятой
-	}
-}
 
 int input(positionOfSymbol* positionCurlyBracket, ProgramText* code)
 {
@@ -247,23 +267,7 @@ int input(positionOfSymbol* positionCurlyBracket, ProgramText* code)
 	return isError;
 }
 
-void output(const successWork_findControlOperator* result, const Operator* foundOperator)
-{
-	if (*result == DONE)
-	{
-		printf_s("%d %d\n", foundOperator->startPosition.stringIndex, foundOperator->startPosition.symbolInStringIndex);
-		char operatorsName[5][9] = { "if", "switch", "for", "while", "do while" }; // Имена операторов
-		puts(operatorsName[foundOperator->type]);
-	}
-	else if (*result == NO_BRACKET)
-	{
-		printf_s("no bracket");
-	}
-	else
-	{
-		printf_s("no operator");
-	}
-}
+
 //Мда
 void removeAllSeparatorsFromString(char str[], const char* seps)
 {

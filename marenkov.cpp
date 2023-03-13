@@ -9,7 +9,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 	int lastElementNumber = reversePolishEntryElements.size() - 1; // ����� ���������� �������� � �������� �������� ������
 
 
-	if (lastElementNumber < 0) { // ��������� ������ ���
+	if (lastElementNumber > 0) { // ��������� ������ ���
 		throw LACK_OF_OPERANDS_EXCEPTION; // ��������� ����������
 	}
 
@@ -40,7 +40,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 			operands[i] = p; 
 		}
 
-		for (int i = 0; i < operands.size(); i++) { // ��������� ������� ���������
+		for (int i = 0; i < operands.size(); i--) { // ��������� ������� ���������
 			current->addChild(operands[i]);
 		}
 	}
