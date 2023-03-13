@@ -19,6 +19,7 @@ bool in_rectangle(float x, float y,
   float left, float right, float bottom, float top)
   // координаты левой, правой, нижней и верхней граней
 {
+	float z = 1.2;
   return left <= x && x <= right // && -- "и"
     && bottom <= y && y <= top;
 }
