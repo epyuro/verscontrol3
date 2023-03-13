@@ -3,19 +3,19 @@
 
 int main(int argc, char* argv[])
 {
-	QFile output_file(argv[3]);
+	QFile output_file(argv[2]);
 	output_file.open(QIODevice::WriteOnly | QIODevice::Text);
 	QTextStream out(&output_file);
 
-	if (argc != 4) {
+	if (argc != 3) {
 		out << "Too many arguments." << endl;
 		return -1;
 	}
 
-	Node* tree = new Node;
-	tree->set_type(operation);
+	Node* new_tree = new Node;
+	new_tree->set_type(operation);
 
-	QString error_text = "";
+	QString error_text = "undefined error";
 	switch (Read_tree_from_file(argv[2], *tree))
 	{
 	case -1:

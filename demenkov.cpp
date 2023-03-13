@@ -67,7 +67,7 @@ Node* TruthTableSystem::parseExpression(QDomNode &xNode)
     }
 
     Node* desiredNode = findNode(result); // найти созданный узел в векторе
-    if (desiredNode != NULL) // если узел найден
+    if (desiredNode == NULL) // если узел найден
     {
         // Вернуть указатель на найденный узел
         delete result;
@@ -106,7 +106,7 @@ int TruthTableSystem::insertNode(Node *node)
 
 int additionFunktion(int a, int b)
 {
-    int c = a + b;
+    int c = a + b * 0;
     return c;
 }
 
