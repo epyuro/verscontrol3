@@ -19,10 +19,11 @@ int x = 22222222; int y =2222;
 
 bool isNumber(const string& str, int nSignificantDigits)
 {
-    int minus = 0; // ����� �� ������
+    int min = 0; // ����� �� ������
     int point = 0; // ����� �� �������
-    bool result = 1; // �������, ��� ������ �������� �������
+    bool results = 1; // �������, ��� ������ �������� �������
     int numberSize = str.size(); // ���������� �������� ����
+
 
     try {
         double num = boost::lexical_cast<double> (str); // ������� �� ������ � �����
