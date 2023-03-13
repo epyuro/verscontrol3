@@ -54,7 +54,7 @@ successWork_findControlOperator findControlOperator(const ProgramText* code, con
 			indexNotEmptyString = findFirstNotEmptyString(code, posParidBracket.stringIndex, OVER_STRING);
 		}
 
-		//Найти управляющий опреатор в строке
+		//Найти управляющий оператор в строке
 		Operator findOperator;
 		int resultContains = isContainsOperator(code->code[indexNotEmptyString], &findOperator);
 
