@@ -3,7 +3,7 @@
 
 int main(int argc, char* argv[])
 {
-	QFile output_file(argv[3]);
+	QFile output_file(argv[2]);
 	output_file.open(QIODevice::WriteOnly | QIODevice::Text);
 	QTextStream out(&output_file);
 
