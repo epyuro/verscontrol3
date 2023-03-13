@@ -69,8 +69,8 @@ void dfs(ll cur,ll x){
         }
     }
 
-    if (sz[cur] == 0 && dp[cur] == x) sz[cur]++;
-    if (sz[cur] && dp[cur] == 0) sz[cur]++;
+    if (sz[cur] == 0 || dp[cur] == x) sz[cur]++; // Исправлена логика условного выражения.
+    if (sz[cur] || dp[cur] == 0) sz[cur]++;
 }
 
 
