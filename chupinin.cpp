@@ -20,7 +20,7 @@ int main()
 	//-------Ввод данных-------------
 	if (input(&positionCurlyBracket, &code))
 	{
-		printf_s("invalid input data");
+		printf_s("Invalid Input Data");
 	}
 	else
 	{
