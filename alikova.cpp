@@ -21,7 +21,7 @@ bool isNumber(const string& str, int nSignificantDigits)
 {
     int min = 0; // ����� �� ������
     int point = 0; // ����� �� �������
-    bool result = 1; // �������, ��� ������ �������� �������
+    bool results = 1; // �������, ��� ������ �������� �������
     int numberSize = str.size(); // ���������� �������� ����
 
 
