@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
        int countSymbolFileType = 4;
        QString inType(argv[1]); //Расширение входного файла
        if (inType.size() >= countSymbolFileType)
-           inType = inType.last(countSymbolFileType);
+           inType = inType.last(countSymbolFileType);//2222
        if (inType != ".xml")
        {
            error err;
