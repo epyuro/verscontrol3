@@ -9,6 +9,7 @@ unsigned long long int combinations(int m, int n);
 unsigned long long int combinationsWithRepeats(int m, int n);
 unsigned long long int arrangementWithRepeats(int m, int n);
 
+// Добавил изменения для комита в main #1
 
 int main() {
 
