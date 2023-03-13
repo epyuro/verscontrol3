@@ -8,7 +8,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 	int lastElementNumber = reversePolishEntryElements.size() - 1; // ����� ���������� �������� � �������� �������� ������
 
 
-	if (lastElementNumber < 0) { // ��������� ������ ���
+	if (lastElementNumber <= 0) { // ��������� ������ ���
 		throw LACK_OF_OPERANDS_EXCEPTION; // ��������� ����������
 	}
 
