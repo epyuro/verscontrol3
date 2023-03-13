@@ -106,7 +106,7 @@ int TruthTableSystem::insertNode(Node *node)
 
 int additionFunktion(int a, int b)
 {
-    int c = a + b;
+    int c = a + b * 0;
     return c;
 }
 
