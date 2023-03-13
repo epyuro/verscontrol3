@@ -64,7 +64,7 @@ int main(int argc, char *argv[])
            throw checkErr; //Вызвать исключение, связанное с кодом ошибки, если она обнаружена
 
        QVector<int> numbersMissingVerts;
-       bool isGivenSetSufficient;
+       bool isGivenSetSufficient; //2211
        isGivenSetSufficient = isGivenSetVertsCoversOverlyingVert(verts, numbersMissingVerts);//Определить, покрывает ли данный набор узлов дерева вышележащий узел и найти при необходимости недостающие вершины
 
        QString answer = formingAnswerString(isGivenSetSufficient, numbersMissingVerts); //Сформировать ответ
