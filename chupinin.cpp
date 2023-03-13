@@ -290,7 +290,7 @@ void deleteAllSeparatorsFromString(char str[], const char* seps)
 		}
 		else
 		{
-			i++; //Перейти к следующему элементу
+			i+=2; //Перейти к следующему элементу
 		}
 	}
 }
