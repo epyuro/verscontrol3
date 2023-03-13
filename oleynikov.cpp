@@ -260,7 +260,7 @@ int isFirstCharAfterFunctionNameParenthesis(const char programCode[MAX_STR_COUNT
     return isParenthesis;
 }
 
-
+// change main 1
 int areThisSymbolAndFirstTokenAfterPositionEqual(const char programCode[MAX_STR_COUNT][MAX_STR_LEN], int stringCount, PositionInCode positionInCode, char symbol, int commentsAreIgnored) 
 {
     PositionInCode positionFirstToken = { -1, -1 };
