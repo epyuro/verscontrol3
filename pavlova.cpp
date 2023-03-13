@@ -165,6 +165,26 @@ int isContainsOperator(const char* str, Operator* operaorInformation)
 
 }
 
+
+int isEndsInSemicolon(const char* str)
+{
+	char strCpy[MAX_ROW_LENGTH];
+	strcpy_s(strCpy, str);//Скопировать содержимое переданной строки
+
+	//Удалить все белые разделители из скопированной строки
+	char whiteSeps[] = " \t\n\v\f\r";
+	deleteAllSeparatorsFromString(strCpy, whiteSeps);
+
+	if (strCpy[strlen(strCpy) - 1] == ';') //последний символ в скопированной строке является точкой с запятой
+	{
+		return 1; //	Считать, что строка оканчивается точкой с запятой
+	}
+	else
+	{
+		return 0; //	Считать, что строка не оканчивается точкой с запятой
+	}
+}
+
 int findFirstNotEmptyString(const ProgramText* code, int strIndex, DirectionFind direction)
 {
 	int indexNotEmptyString = -1; //Считать, что непустая строка не найдена
@@ -199,24 +219,6 @@ int findFirstNotEmptyString(const ProgramText* code, int strIndex, DirectionFind
 	return indexNotEmptyString;
 }
 
-int isEndsInSemicolon(const char* str)
-{
-	char strCpy[MAX_ROW_LENGTH];
-	strcpy_s(strCpy, str);//Скопировать содержимое переданной строки
-
-	//Удалить все белые разделители из скопированной строки
-	char whiteSeps[] = " \t\n\v\f\r";
-	deleteAllSeparatorsFromString(strCpy, whiteSeps);
-
-	if (strCpy[strlen(strCpy) - 1] == ';') //последний символ в скопированной строке является точкой с запятой
-	{
-		return 1; //	Считать, что строка оканчивается точкой с запятой
-	}
-	else
-	{
-		return 0; //	Считать, что строка не оканчивается точкой с запятой
-	}
-}
 
 int input(positionOfSymbol* positionCurlyBracket, ProgramText* code)
 {
