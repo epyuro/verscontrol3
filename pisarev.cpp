@@ -52,6 +52,8 @@ int main() {
 	return 0;
 }
 
+// Добавил изменения для в main #2
+
 unsigned long long int combinations(int m, int n)
 {
 	if (m == 0 || m == n) return 1;
