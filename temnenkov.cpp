@@ -50,7 +50,7 @@ int main(int argc, char *argv[])
        readXML(argv[1], &firstVert); //Считать вершины из xml-файла
 
        //Получить вектор всех вершин
-       QVector<vert*> verts;
+       QVector<vert*> verts; //1111
        verts.append(firstVert);
        QVector<vert*> children;
        findAllChildren(&firstVert, children);
