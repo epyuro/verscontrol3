@@ -55,4 +55,9 @@ bool aaswwww(int xe, int yq){
 	return false;
 }
 
+bool delete(int deleter){
+	if (deleter!=0)
+		return false;
+	return true;
+}
 
