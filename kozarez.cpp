@@ -5,13 +5,13 @@
 #include <string.h>
 #include <stdio.h>
 #include "..\09_Gailevich_Y_V\Header.h"
-
+//first stage
 
 #define MAX_STRING_AMOUNT 60
 #define MAX_STRING_LENGTH 90
 #define MAX_OPERATOR_LENGTH 10
 
-
+//second stage
 int findFirstStringWithGivenOperator(char code[MAX_STRING_AMOUNT][MAX_STRING_LENGTH], char oper[MAX_OPERATOR_LENGTH], int StringAmount)
 {
 	int i=0; // Счетчик для цикла
@@ -43,7 +43,7 @@ int findFirstStringWithGivenOperator(char code[MAX_STRING_AMOUNT][MAX_STRING_LEN
 	}
 	return -1;
 }
-
+//third stage
 
 int main()
 {
@@ -68,7 +68,7 @@ int main()
 	{
 		gets_s(InputText[k]);
 	}
-
+//fiveth stage
 	gets_s(GivenOperator);
 
 	char OperatorDevider[] = " ";

@@ -1,7 +1,7 @@
 #include "filemanager.h"
 
 /*!
- * \file
+ * \filess
  * \brief Файл, содержащий реализацию FileManager
  */
 
@@ -45,7 +45,7 @@ QDomNode FileManager::getXRootNode()
 
 int TruthTableSystem::insertNode(Node *node)
 {
-    int isVariable = 0; // считать заданный узел операцией
+    int isVariable = 0; // считать заданный узел операцией номер один
     if (dynamic_cast<Variable*>(node)) // если заданный узел - переменная
     {
         int index = 0;
@@ -60,7 +60,7 @@ int TruthTableSystem::insertNode(Node *node)
     }
     else
     {
-        // Добавить узел в конец вектора
+        // Добавить узел в конец вектора номер три
         nodes.append(node);
     }
     return isVariable;
@@ -72,7 +72,7 @@ void FileManager::writeOutputFile(QStringList &subExpressions, short *values, in
     outputFile.open(QIODevice::WriteOnly);
     QTextStream outputStream(&outputFile);
 
-    // Преобразовать строки матрицы значений в строки выходного файла
+    // Преобразовать строки матрицы значений в строки выходного файла номер два
     char* vals = (char*)malloc(2*rowAmount*columnAmount*sizeof(char)+1);
 
     int k = 0;

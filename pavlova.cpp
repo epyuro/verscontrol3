@@ -41,6 +41,7 @@ void output(const successWork_findControlOperator* result, const Operator* found
 	}
 }
 
+<<<<<<< HEAD
 void removeAllSeparatorsFromString(char str[], const char* seps)
 {
 	int i = 0; //Считать индекс текущего элемента равным нулю
@@ -62,6 +63,8 @@ void removeAllSeparatorsFromString(char str[], const char* seps)
 	}
 }
 
+=======
+>>>>>>> dem/main
 successWork_findControlOperator findControlOperator(const ProgramText* code, const positionOfSymbol* positionOfCurlyBracket, Operator* operatorInformation)
 {
 	//Если переданная позиция не является скобкой...
@@ -204,6 +207,26 @@ int isContainsOperator(const char* str, Operator* operaorInformation)
 
 }
 
+
+int isEndsInSemicolon(const char* str)
+{
+	char strCpy[MAX_ROW_LENGTH];
+	strcpy_s(strCpy, str);//Скопировать содержимое переданной строки
+
+	//Удалить все белые разделители из скопированной строки
+	char whiteSeps[] = " \t\n\v\f\r";
+	deleteAllSeparatorsFromString(strCpy, whiteSeps);
+
+	if (strCpy[strlen(strCpy) - 1] == ';') //последний символ в скопированной строке является точкой с запятой
+	{
+		return 1; //	Считать, что строка оканчивается точкой с запятой
+	}
+	else
+	{
+		return 0; //	Считать, что строка не оканчивается точкой с запятой
+	}
+}
+
 int findFirstNotEmptyString(const ProgramText* code, int strIndex, DirectionFind direction)
 {
 	int indexNotEmptyString = -1; //Считать, что непустая строка не найдена
@@ -238,24 +261,6 @@ int findFirstNotEmptyString(const ProgramText* code, int strIndex, DirectionFind
 	return indexNotEmptyString;
 }
 
-int isEndsInSemicolon(const char* str)
-{
-	char strCpy[MAX_ROW_LENGTH];
-	strcpy_s(strCpy, str);//Скопировать содержимое переданной строки
-
-	//Удалить все белые разделители из скопированной строки
-	char whiteSeps[] = " \t\n\v\f\r";
-	deleteAllSeparatorsFromString(strCpy, whiteSeps);
-
-	if (strCpy[strlen(strCpy) - 1] == ';') //последний символ в скопированной строке является точкой с запятой
-	{
-		return 1; //	Считать, что строка оканчивается точкой с запятой
-	}
-	else
-	{
-		return 0; //	Считать, что строка не оканчивается точкой с запятой
-	}
-}
 
 int input(positionOfSymbol* positionCurlyBracket, ProgramText* code)
 {
@@ -287,3 +292,24 @@ int input(positionOfSymbol* positionCurlyBracket, ProgramText* code)
 }
 
 
+//Мда
+void removeAllSeparatorsFromString(char str[], const char* seps)
+{
+	int i = 0; //Считать индекс текущего элемента равным нулю
+	while (i < strlen(str))//пока не пройдены все элементы строки
+	{
+		if (strchr(seps, str[i]))//текущий элемент является разделителем
+		{
+			//Сдвинуть все элементы начиная с текущего влево
+			for (int j = i; j < strlen(str) - 1; j++)
+			{
+				str[j] = str[j + 1];
+			}
+			str[strlen(str) - 1] = NULL; //Считать последний символ в строке концом строки
+		}
+		else
+		{
+			i++; //Перейти к следующему элементу
+		}
+	}
+}

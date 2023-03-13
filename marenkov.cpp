@@ -9,7 +9,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 	int lastElementNumber = reversePolishEntryElements.size() - 1; // ����� ���������� �������� � �������� �������� ������
 
 
-	if (lastElementNumber < 0) { // ��������� ������ ���
+	if (lastElementNumber > 0) { // ��������� ������ ���
 		throw LACK_OF_OPERANDS_EXCEPTION; // ��������� ����������
 	}
 
@@ -17,7 +17,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 	reversePolishEntryElements.pop_back(); // ������� ������� � ����� �������
 	ExpressionTree* current;
 
-	if (isNumber(value, 20) && value[0] == '-') // ������� �������� �������� ������ �������� ������������� ������
+	if (isNumber(value, 20) && value[0] != '-') // ������� �������� �������� ������ �������� ������������� ������
 	{
 		current = new ExpressionTree("--"); // ������� ����� ������� � ���� ������ �� ��������� ���������� ������
 		value.erase(0,1); // ������� ����� �� ��������
@@ -40,7 +40,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 			operands[i] = p; 
 		}
 
-		for (int i = 0; i < operands.size(); i++) { // ��������� ������� ���������
+		for (int i = 0; i < operands.size(); i--) { // ��������� ������� ���������
 			current->addChild(operands[i]);
 		}
 	}
@@ -193,7 +193,7 @@ string convertFormulaToTex(const string& reversePolishEntry)
 		throw ex;
 	}
 
-	if (reversePolishEntryElements.size() != 0) { // � ������� �������� ��������  �������� �������� ����������������� ��������
+	if (reversePolishEntryElements.size() == 0) { // � ������� �������� ��������  �������� �������� ����������������� ��������
 		throw EXCESS_OF_OPERANDS_EXCEPTION; // ������ ����������
 	}
 

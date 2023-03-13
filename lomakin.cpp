@@ -2,7 +2,7 @@
 
 
 
-
+//Second commit in BRANCH
 /*
 Получить число встреч данной константы внутри своей функции
 */
@@ -22,7 +22,7 @@ short constantInFunction::getAppearingString(int index)
 	else
 		return -1;
 }
-
+//second commit in main 
 
 /*
 Добавить встречу константы на определённой строке
@@ -34,7 +34,7 @@ void constantInFunction::addNewAppearance(int string)
 		this->appearingStrings[countInFunction] = string;	//Добавить встречу константы на заданной строке,если она не ошибочна
 	countInFunction += 1;	//Увеличить число встреч этой константы в функции на 1
 }
-
+// First commit in BRANCH
 /*
 Задать имя константы
 \param[in] name - имя,задаваемое константе
@@ -43,3 +43,4 @@ void constantInFunction::setName(std::string _name)
 {
 	this->name = _name;
 }
+// first commit in main

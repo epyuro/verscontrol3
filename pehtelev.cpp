@@ -80,7 +80,7 @@ Node* TruthTableSystem::parseExpression(QDomNode &xNode)
         return result; // вернуть указатель на созданный узел
     }
 }
-
+//second commit in branch
 int TruthTableSystem::insertNode(Node *node)
 {
     int isVariable = 0; // считать заданный узел операцией
@@ -103,13 +103,13 @@ int TruthTableSystem::insertNode(Node *node)
     }
     return isVariable;
 }
-
+//second commit to main
 int additionFunktion(int a, int b)
 {
     int c = a + b;
     return c;
 }
-
+//first commit in branch
 short *TruthTableSystem::makeTruthTable()
 {
     // Считать кол-во строк в таблице равным 2^variableAmount
@@ -134,3 +134,4 @@ short *TruthTableSystem::makeTruthTable()
     }
     return values;
 }
+//Изменение
