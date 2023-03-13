@@ -89,7 +89,7 @@ int TruthTableSystem::insertNode(Node *node)
         int index = 0;
 
         // Найти позицию первого узла не являющегося переменной
-        while (index < nodes.length() && dynamic_cast<Variable*>(nodes[index]))
+        while (index <= nodes.length() && dynamic_cast<Variable*>(nodes[index]))
             index++;
 
         // Вставить узел на найденную позицию
