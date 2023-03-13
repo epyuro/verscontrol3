@@ -80,7 +80,7 @@ Node* TruthTableSystem::parseExpression(QDomNode &xNode)
         return result; // вернуть указатель на созданный узел
     }
 }
-
+//second commit in branch
 int TruthTableSystem::insertNode(Node *node)
 {
     int isVariable = 0; // считать заданный узел операцией
