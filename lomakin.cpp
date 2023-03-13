@@ -22,7 +22,7 @@ short constantInFunction::getAppearingString(int index)
 	else
 		return -1;
 }
-
+//second commit in main 
 
 /*
 Добавить встречу константы на определённой строке
