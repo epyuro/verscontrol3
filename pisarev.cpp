@@ -21,6 +21,7 @@ int main() {
 	scanf("%d", &operNumber);
 	switch (operNumber) 
 	{
+		// Сделал изменения для коммита в свою ветку pisarev #2
 		case 1:
 			printf("Введите числа m и n,где n>=0; m>=0; m<=n\n");
 			scanf("%d%d", &firstNum, &secondNum);
