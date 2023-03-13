@@ -11,6 +11,7 @@ unsigned long long int arrangementWithRepeats(int m, int n);
 
 
 int main() {
+	// Сделал измения для коммита в свою ветку pisarev #1
 
 	int operNumber = 0;
 	int firstNum = 0;
