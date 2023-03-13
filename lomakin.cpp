@@ -34,7 +34,7 @@ void constantInFunction::addNewAppearance(int string)
 		this->appearingStrings[countInFunction] = string;	//Добавить встречу константы на заданной строке,если она не ошибочна
 	countInFunction += 1;	//Увеличить число встреч этой константы в функции на 1
 }
-
+// First commit in BRANCH
 /*
 Задать имя константы
 \param[in] name - имя,задаваемое константе
