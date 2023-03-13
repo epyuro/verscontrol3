@@ -313,9 +313,16 @@ int isKeyword(const char word[])
     return wordIsKeyword;
 }
 
+int function(const int a) {
+    int res = 0;
+    for (int i = 0; i < a; i++) {
+        res++;
+    }
 
+    return res;
+}
 
-// Файл был передан Болгову Д. А. для дальнейшей работы и редактирования.
-
-
-// Еще один коммит.
+int func1(int al) {
+    int res = function(al);
+    return res++;
+}
