@@ -112,7 +112,7 @@ bool isGreekLetter(const string& str)
 
 bool isVar(const string& str) {
 
-    bool result = 1; // �������, ��� ������ �������� ����������
+    bool results = 1; // �������, ��� ������ �������� ����������
 
     for (int i = 0; i < str.size(); i++) { // ��� ���� ��������� ������
 
