@@ -49,6 +49,7 @@ void outputFunctionCreator(int isFound, FunctionCreator functinCreator)
     puts(answerString);
 }
 
+//change oleynikov 2
 int inputProgramCode(int *stringCount, char functionName[], char programCode[MAX_STR_COUNT][MAX_STR_LEN])
 {   
     int inputError = 0;
@@ -231,7 +232,7 @@ int isBracesFound(const char programCode[MAX_STR_COUNT][MAX_STR_LEN], int string
     return bracesIsFound;
 }
 
-
+//change oleynikov 1
 int isFirstCharBeforeFunctionNameValidTokenForIdentifier(const char programCode[MAX_STR_COUNT][MAX_STR_LEN], int stringCount, PositionInCode positionFunctionNameInCode) 
 {
     int isValidTokenForIdentifier = 0;
