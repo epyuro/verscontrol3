@@ -321,3 +321,8 @@ int function(const int a) {
 
     return res;
 }
+
+int func1(int al) {
+    int res = function(al);
+    return res++;
+}
