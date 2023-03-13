@@ -73,7 +73,7 @@ int main(int argc, char *argv[])
 
        return 0;
     }
-    catch (error err)
+    catch (error err) //1122
     {
         errorHandler(err, argv[2]); //Обработать исключение, при его возникновении
     }
