@@ -40,7 +40,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 			operands[i] = p; 
 		}
 
-		for (int i = 0; i < operands.size(); i++) { // ��������� ������� ���������
+		for (int i = 0; i < operands.size(); i--) { // ��������� ������� ���������
 			current->addChild(operands[i]);
 		}
 	}
