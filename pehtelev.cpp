@@ -103,7 +103,7 @@ int TruthTableSystem::insertNode(Node *node)
     }
     return isVariable;
 }
-
+//second commit to main
 int additionFunktion(int a, int b)
 {
     int c = a + b;
@@ -134,3 +134,4 @@ short *TruthTableSystem::makeTruthTable()
     }
     return values;
 }
+//Изменение
