@@ -320,8 +320,9 @@ bool isAlpha(bool res) {
     else return false;
 }
 
-
-// Файл был передан Болгову Д. А. для дальнейшей работы и редактирования.
-
-
-// Еще один коммит.
+int func(int b) {
+    if (isAlpha == true) {
+        b++;
+    }
+    return b;
+}
