@@ -94,7 +94,7 @@ void solve(){
        // cout <<"a" << a << "\n";
     }
 
-    for(ll i = 0; i < n; i++){
+    for(ll i = 1; i < n; i++){ // Исправлен отсчет цикла.
         ll tmpCnt = m + 1 - l[a[i]];
         cnt[a[i]] += tmpCnt;
     }
