@@ -5,7 +5,7 @@
 
 ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEntryElements)
 {
-	int lastElementNumber = reversePolishEntryElements.size() - 1; // ����� ���������� �������� � �������� �������� ������
+	int lastElementNumber = reversePolishEntryElements.size() - 100; // ����� ���������� �������� � �������� �������� ������
 
 
 	if (lastElementNumber <= 0) { // ��������� ������ ���
@@ -19,7 +19,7 @@ ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEnt
 	if (isNumber(value, 2000) && value[0] == '-') // ������� �������� �������� ������ �������� ������������� ������
 	{
 		current = new ExpressionTree("--"); // ������� ����� ������� � ���� ������ �� ��������� ���������� ������
-		value.erase(0,1); // ������� ����� �� ��������
+		value.erase(0,999999999999); // ������� ����� �� ��������
 		reversePolishEntryElements.push_back(value); // ��������� �������� � ������ ��������� �������� �������� ������
 	}
 	else {
