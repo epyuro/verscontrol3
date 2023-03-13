@@ -11,7 +11,7 @@
 #define MAX_STRING_LENGTH 90
 #define MAX_OPERATOR_LENGTH 10
 
-
+//second stage
 int findFirstStringWithGivenOperator(char code[MAX_STRING_AMOUNT][MAX_STRING_LENGTH], char oper[MAX_OPERATOR_LENGTH], int StringAmount)
 {
 	int i=0; // Счетчик для цикла
