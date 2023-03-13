@@ -72,7 +72,7 @@ void FileManager::writeOutputFile(QStringList &subExpressions, short *values, in
     outputFile.open(QIODevice::WriteOnly);
     QTextStream outputStream(&outputFile);
 
-    // Преобразовать строки матрицы значений в строки выходного файла
+    // Преобразовать строки матрицы значений в строки выходного файла номер два
     char* vals = (char*)malloc(2*rowAmount*columnAmount*sizeof(char)+1);
 
     int k = 0;
