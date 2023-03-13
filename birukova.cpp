@@ -15,7 +15,7 @@ int main(int argc, char* argv[])
 	Node* tree = new Node;
 	tree->set_type(operation);
 
-	QString error_text = "";
+	QString error_text = "undefined error";
 	switch (Read_tree_from_file(argv[2], *tree))
 	{
 	case -1:
