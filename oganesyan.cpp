@@ -11,6 +11,7 @@ bool in_circle(float x, float y,
   const float dx = x - cx,
               dy = y - cy;
 
+	float j = 1.33;
   return dx * dx + dy * dy <= r * r;
 }
 
@@ -60,4 +61,6 @@ bool delete(int deleter){
 		return false;
 	return true;
 }
+
+
 
