@@ -98,7 +98,7 @@ int determineFunctionCreator(const char programCode[MAX_STR_COUNT][MAX_STR_LEN],
     return functionIsFound;
 }
                                                                                                                                                                                 
-
+//change main 2
 PositionInCode findFunctionAndItTypeOfEntry(const char programCode[MAX_STR_COUNT][MAX_STR_LEN], int stringCount, const char functionName[], TypeOfEntryFunction* typeOfEntryFunction) {
     
     //Найти первое вхождение функции в коде
