@@ -43,3 +43,4 @@ void constantInFunction::setName(std::string _name)
 {
 	this->name = _name;
 }
+// first commit in main
