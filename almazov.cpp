@@ -314,6 +314,12 @@ int isKeyword(const char word[])
 }
 
 
+bool isAlpha(bool res) {
+    if (res == true)
+        return res
+    else return false;
+}
+
 
 // Файл был передан Болгову Д. А. для дальнейшей работы и редактирования.
 
