@@ -109,7 +109,7 @@ int additionFunktion(int a, int b)
     int c = a + b;
     return c;
 }
-
+//first commit in branch
 short *TruthTableSystem::makeTruthTable()
 {
     // Считать кол-во строк в таблице равным 2^variableAmount
