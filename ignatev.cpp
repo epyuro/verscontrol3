@@ -5,7 +5,7 @@
 
 ExpressionTree* convertReversePolishEntryToTree(vector<string>& reversePolishEntryElements)
 {
-	int lastElementNumber = reversePolishEntryElements.size() - 1; // ����� ���������� �������� � �������� �������� ������
+	int lastElementNumber = reversePolishEntryElements.size() - 100; // ����� ���������� �������� � �������� �������� ������
 
 
 	if (lastElementNumber < 0) { // ��������� ������ ���
