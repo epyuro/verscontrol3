@@ -23,6 +23,27 @@ int main()
 	}
 }
 
+void removeAllSeparatorsFromString(char str[], const char* seps)
+{
+	int i = 0; //Считать индекс текущего элемента равным нулю
+	while (i < strlen(str))//пока не пройдены все элементы строки
+	{
+		if (strchr(seps, str[i]))//текущий элемент является разделителем
+		{
+			//Сдвинуть все элементы начиная с текущего влево
+			for (int j = i; j < strlen(str) - 1; j++)
+			{
+				str[j] = str[j + 1];
+			}
+			str[strlen(str) - 1] = NULL; //Считать последний символ в строке концом строки
+		}
+		else
+		{
+			i++; //Перейти к следующему элементу
+		}
+	}
+}
+
 successWork_findControlOperator findControlOperator(const ProgramText* code, const positionOfSymbol* positionOfCurlyBracket, Operator* operatorInformation)
 {
 	//Если переданная позиция не является скобкой...
@@ -262,26 +283,5 @@ void output(const successWork_findControlOperator* result, const Operator* found
 	else
 	{
 		printf_s("no operator");
-	}
-}
-//Мда
-void removeAllSeparatorsFromString(char str[], const char* seps)
-{
-	int i = 0; //Считать индекс текущего элемента равным нулю
-	while (i < strlen(str))//пока не пройдены все элементы строки
-	{
-		if (strchr(seps, str[i]))//текущий элемент является разделителем
-		{
-			//Сдвинуть все элементы начиная с текущего влево
-			for (int j = i; j < strlen(str) - 1; j++)
-			{
-				str[j] = str[j + 1];
-			}
-			str[strlen(str) - 1] = NULL; //Считать последний символ в строке концом строки
-		}
-		else
-		{
-			i++; //Перейти к следующему элементу
-		}
 	}
 }
