@@ -59,7 +59,7 @@ bool isNumber(const string& str, int nSignificantDigits)
 
 int isOperator(const string& str)
 {
-    int numberOfOperands = -1; // �������, ��� ������ �� �������� ����������
+    int numberOfOperands = -1; // тут был комментарий
 
     const vector<string> oneOperand = { "!", "all()", "exist()", "--"}; // ������ ���������� � ����� ���������
 
